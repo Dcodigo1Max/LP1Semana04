@@ -5,6 +5,14 @@ using System.Threading;
 
 namespace BetterDecorador
 {
+
+    /// <summary>
+    /// O programa recebe um string, 
+    /// nesse string são adicionados caracteres,
+    /// pelo Metodo Decor, que indica atraves do ciclo nele,
+    /// o numero atraves dos dados escritos 
+    // na consola pelo utilizador.
+    /// </summary>
     public class Program
     {
         /// <summary>
