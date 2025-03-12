@@ -46,14 +46,26 @@ namespace BetterDecorador
 
         /// <summary>
         /// Imprime o Metodo Decor de acordo com os parametros fornecidos
-        ///  e faz a conversão das variaveis necessarias para string
+        ///  e faz a conversão das variaveis necessarias para string;
+        ///  Tem tambem agora um if e else para especificar que:
+        ///  se o utilizador não por os inputs na consola é chamado o 
+        ///  Decor vazio;
+        ///  Ou então ele escreve normalmente
         /// </summary>
         /// <param name="args"></param>
 
         private static void Main(string[] args)
         {
 
-            Console.WriteLine(Decor(args[0], char.Parse(args[1]), int.Parse(args[2])));
+            if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+                Console.WriteLine(Decor(args[0], char.Parse(args[1]), int.Parse(args[2])));
+            }
+            
            
 
 
@@ -63,6 +75,12 @@ namespace BetterDecorador
 
         }
     
+        /// <summary>
+        /// Este metodo faz com que no caso 
+        /// de não haver input na consola
+        /// o programa escreva o codigo em baixo
+        /// </summary>
+        /// <returns></returns>
             
             private static string Decor()
             {
@@ -74,7 +92,7 @@ namespace BetterDecorador
             
             return input_solution;
             
-            }
+        }
            
         
     
