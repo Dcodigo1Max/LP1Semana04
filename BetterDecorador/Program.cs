@@ -1,12 +1,24 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace BetterDecorador
 {
     public class Program
     {
+        private static string Decor(string s, char dec)
+            {
+                return $"{dec}{dec}{dec} {s} {dec}{dec}{dec} "; 
+            }
+
+       
+       
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+           
+            Console.WriteLine(Decor("Good Morning!", '*'));
+            Console.WriteLine(Decor("Good Evening!", '.'));
+
+
         }
     }
 }
