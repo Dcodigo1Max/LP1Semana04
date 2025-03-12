@@ -62,5 +62,24 @@ namespace BetterDecorador
 
 
         }
+    
+            
+            private static string Decor()
+            {
+            string s_part = "User did not specify args!"; 
+            char dec_part = '=';
+            int numbers_part = 3;
+            
+            string input_solution = Decor(s_part, dec_part, numbers_part);
+            
+            return input_solution;
+            
+            }
+           
+        
+    
+    
     }
+
+
 }
