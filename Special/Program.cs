@@ -6,8 +6,10 @@ namespace Special
     {
         private static void Main(string[] args)
         {
-            v = int.Parse(v);
-            
+            string str = Console.ReadLine();
+            int v = int.Parse(str);
+           
+
             GetSpecial(v);
             
         }
