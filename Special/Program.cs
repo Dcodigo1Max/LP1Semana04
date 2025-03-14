@@ -6,26 +6,27 @@ namespace Special
     {
         private static void Main(string[] args)
         {
-            string str = Console.ReadLine();
-            int v = int.Parse(str);
-           
+            Console.WriteLine("Insert n-th number of the special sequence");
+            int v = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{GetSpecial(v)}");
 
-            GetSpecial(v);
+            
             
         }
 
 
         private static int GetSpecial(int n)
-        {
-            GetSpecial(n);
-
-            
-            int fact;
-            if (n==1)
-                fact =1;
+        {            
+            int ponto;
+            if (n==0)
+                ponto =0;
+            else if(n==1)
+            {
+                ponto =1;
+            }
             else
-                fact = n* Factorial(n-1);
-            return fact;
+                ponto =GetSpecial(n-1) +(2 * GetSpecial(n-2));
+            return ponto;
         }
     }
 }
